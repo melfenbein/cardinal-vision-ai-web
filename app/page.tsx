@@ -750,7 +750,35 @@ export default function Home() {
                 See How It Works
               </a>
             </div>
-
+<div style={{
+  display: "flex",
+  gap: 20,
+  marginTop: 50,
+  flexWrap: "wrap"
+}}>
+  {[
+    "/brady.jpg",
+    "/jordan.jpg",
+    "/trout.jpg",
+    "/charizard.png",
+    "/gengar.jpg",
+    "/flagg.jpg",
+    "/celebrini.jpg"
+  ].map((src, i) => (
+    <img
+      key={i}
+      src={src}
+      alt="card"
+      style={{
+        width: 140,
+        height: "auto",
+        borderRadius: 12,
+        boxShadow: "0 12px 30px rgba(0,0,0,0.7)",
+        transform: `rotate(${i % 2 === 0 ? "-6deg" : "6deg"})`
+      }}
+    />
+  ))}
+</div>
             <div
               style={{
                 display: "flex",

@@ -750,34 +750,59 @@ export default function Home() {
                 See How It Works
               </a>
             </div>
-<div style={{
-  display: "flex",
-  gap: 20,
-  marginTop: 50,
-  flexWrap: "wrap"
-}}>
+<div
+  style={{
+    display: "flex",
+    gap: 20,
+    marginTop: 50,
+    flexWrap: "wrap",
+    alignItems: "flex-end",
+  }}
+>
   {[
-    "/brady.jpg",
-    "/jordan.jpg",
-    "/trout.jpg",
-    "/charizard.png",
-    "/gengar.jpg",
-    "/flagg.jpg",
-    "/celebrini.jpg"
-  ].map((src, i) => (
-    <img
-      key={i}
-      src={src}
-      alt="card"
+    { src: "/brady.jpg", label: "Brady" },
+    { src: "/jordan.jpg", label: "Jordan" },
+    { src: "/trout.jpg", label: "Trout" },
+    { src: "/charizard.png", label: "Charizard" },
+    { src: "/gengar.jpg", label: "Gengar" },
+    { src: "/flagg.jpg", label: "Flagg" },
+    { src: "/celebrini.jpg", label: "Celebrini" },
+  ].map((card, i) => (
+    <div
+      key={card.src}
       style={{
-        width: 140,
-        height: "auto",
-        borderRadius: 12,
-        boxShadow: "0 12px 30px rgba(0,0,0,0.7)",
-        transform: `rotate(${i % 2 === 0 ? "-6deg" : "6deg"})`
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
-    />
+    >
+      <img
+        src={card.src}
+        alt={card.label}
+        style={{
+          width: 140,
+          height: 220,
+          objectFit: "contain",
+          background: "rgba(255,255,255,0.05)",
+          borderRadius: 12,
+          boxShadow: "0 12px 30px rgba(0,0,0,0.7)",
+          transform: `rotate(${i % 2 === 0 ? "-6deg" : "6deg"})`,
+          display: "block",
+        }}
+      />
+      <div
+        style={{
+          marginTop: 10,
+          color: "#A8B1C7",
+          fontSize: 13,
+          fontWeight: 600,
+        }}
+      >
+        {card.label}
+      </div>
+    </div>
   ))}
+</div>
 </div>
             <div
               style={{

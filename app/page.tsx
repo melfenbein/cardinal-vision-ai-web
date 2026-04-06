@@ -152,7 +152,7 @@ export default function Home() {
           src="/logo.png"
           alt="Cardinal logo"
           style={{
-            height: 72,
+            height: 92,
             width: "auto",
             objectFit: "contain",
             display: "block",

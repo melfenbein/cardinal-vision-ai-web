@@ -244,7 +244,18 @@ export default function Home() {
       >
         The fastest way to price and sell your cards.
       </h1>
-
+<div style={{ marginTop: 30 }}>
+  <img
+    src="/logo.png"
+    alt="Cardinal"
+    style={{
+      height: 120,
+      width: "auto",
+      objectFit: "contain",
+      filter: "drop-shadow(0 12px 30px rgba(0,0,0,0.4))"
+    }}
+  />
+</div>
       <p
         style={{
           color: "#C7CFE0",

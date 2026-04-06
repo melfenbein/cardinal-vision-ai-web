@@ -5,10 +5,21 @@ export default function Home() {
     <main style={{background:"#0B0F1A", color:"white", minHeight:"100vh", fontFamily:"Arial"}}>
       
       {/* NAV */}
-      <div style={{display:"flex", alignItems:"center", padding:"20px 40px"}}>
-        <Image src="/logo.png" alt="Cardinal Logo" width={40} height={40} />
-        <h2 style={{marginLeft:12}}>Cardinal Vision AI</h2>
-      </div>
+     <div style={{display:"flex", alignItems:"center", gap:16, padding:"24px 40px"}}>
+  <img 
+    src="/logo.png" 
+    alt="Cardinal"
+    style={{height:56, width:"auto", objectFit:"contain"}}
+  />
+  <span style={{
+    color:"white",
+    fontSize:20,
+    fontWeight:700,
+    letterSpacing:"-0.02em"
+  }}>
+    Cardinal
+  </span>
+</div>
 
       {/* HERO */}
       <div style={{padding:"80px 40px", maxWidth:900}}>

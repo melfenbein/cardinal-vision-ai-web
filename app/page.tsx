@@ -439,12 +439,16 @@ export default function Home() {
                     border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
-                  <Image
-                    src="/logo.png"
-                    alt="Cardinal"
-                    width={72}
-                    height={72}
-                  />
+              <img
+  src="/logo-icon.png"
+  alt="Cardinal"
+  style={{
+    height: 72,
+    width: "auto",
+    objectFit: "contain",
+    display: "block",
+  }}
+/>
                 </div>
 
                 <div>

@@ -268,17 +268,35 @@ export default function CardinalVisionHomepageMockup() {
               </div>
 
               <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5">
-                {[
-                  ["Traditional grading", "One destination, one outcome, and no built-in intelligence around liquidity or best execution.", false],
-                  ["Cardinal", "Pricing intelligence, grade probability, optional offers, and routing logic in one premium experience.", true],
-                  ["For collectors", "More confidence, more speed, and better decision quality before spending money on grading or listing.", false],
-                  ["For buyers and partners", "Better-qualified supply, stronger underwriting, and improved pricing signals entering the market.", false],
-                ].map(([title, text, highlight]) => (
-                  <div key={title} className="border-b border-white/10 p-6 last:border-b-0">
-                    <div className={`text-xl font-extrabold tracking-tight ${highlight ? "text-red-200" : "text-white"}`}>{title}</div>
-                    <div className="mt-2 text-base leading-7 text-slate-300">{text}</div>
-                  </div>
-                ))}
+              {[
+  {
+    title: "Traditional grading",
+    text: "One destination, one outcome, and no built-in intelligence around liquidity or best execution.",
+    highlight: false,
+  },
+  {
+    title: "Cardinal",
+    text: "Pricing intelligence, grade probability, optional offers, and routing logic in one premium experience.",
+    highlight: true,
+  },
+  {
+    title: "For collectors",
+    text: "More confidence, more speed, and better decision quality before spending money on grading or listing.",
+    highlight: false,
+  },
+  {
+    title: "For buyers and partners",
+    text: "Better-qualified supply, stronger underwriting, and improved pricing signals entering the market.",
+    highlight: false,
+  },
+].map((item) => (
+  <div key={item.title} className="border-b border-white/10 p-6 last:border-b-0">
+    <div className={`text-xl font-extrabold tracking-tight ${item.highlight ? "text-red-200" : "text-white"}`}>
+      {item.title}
+    </div>
+    <div className="mt-2 text-base leading-7 text-slate-300">{item.text}</div>
+  </div>
+))}
               </div>
             </div>
           </section>

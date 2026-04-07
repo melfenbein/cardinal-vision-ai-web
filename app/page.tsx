@@ -115,60 +115,91 @@ export default function Home() {
           'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
-   <header
+<header
   style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "18px 32px",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
     position: "sticky",
     top: 0,
-    backdropFilter: "blur(12px)",
-    background: "rgba(8,12,28,0.78)",
     zIndex: 20,
+    backdropFilter: "blur(12px)",
+    background: "rgba(8,12,28,0.85)",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
   }}
 >
   <div
     style={{
       width: "min(1180px, calc(100% - 40px))",
+      margin: "0 auto",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      padding: "16px 0",
       gap: 20,
     }}
   >
-    {/* LOGO ONLY */}
-    <img
-      src="/logo-wordmark.png"
-      alt="Cardinal"
-      style={{
-        height: 64,
-        width: "auto",
-        objectFit: "contain",
-        display: "block",
-      }}
-    />
+    {/* LEFT: LOGO + BRAND */}
+    <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+      <img
+        src="/logo-icon.png"
+        alt="Cardinal"
+        style={{
+          height: 36,
+          width: "auto",
+          objectFit: "contain",
+        }}
+      />
 
-    {/* NAV */}
+      <div style={{ lineHeight: 1 }}>
+        <div
+          style={{
+            fontWeight: 800,
+            fontSize: 18,
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Cardinal Vision AI
+        </div>
+        <div
+          style={{
+            fontSize: 12,
+            color: "#8F99B2",
+            marginTop: 2,
+          }}
+        >
+          The decision layer for collectibles
+        </div>
+      </div>
+    </div>
+
+    {/* RIGHT: NAV + CTA */}
     <div
       style={{
         display: "flex",
-        gap: 22,
         alignItems: "center",
-        color: "#D6DBE8",
+        gap: 22,
         fontSize: 14,
-        fontWeight: 500,
+        color: "#D6DBE8",
       }}
     >
-      <a href="#how" style={{ color: "inherit", textDecoration: "none" }}>
+      <a href="#how" style={{ textDecoration: "none", color: "inherit" }}>
         How it works
       </a>
-      <a href="#why" style={{ color: "inherit", textDecoration: "none" }}>
+      <a href="#why" style={{ textDecoration: "none", color: "inherit" }}>
         Why Cardinal
       </a>
-      <a href="#access" style={{ color: "inherit", textDecoration: "none" }}>
-        Early access
+
+      {/* CTA */}
+      <a
+        href="#access"
+        style={{
+          padding: "10px 16px",
+          borderRadius: 999,
+          background: "linear-gradient(135deg, #EF3340, #C71F3C)",
+          color: "#fff",
+          fontWeight: 700,
+          textDecoration: "none",
+        }}
+      >
+        Early Access
       </a>
     </div>
   </div>

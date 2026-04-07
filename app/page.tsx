@@ -923,7 +923,16 @@ export default function Home() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <Image src="/logo.png" alt="Cardinal logo" width={40} height={40} />
+          <img
+  src="/logo-icon.png"
+  alt="Cardinal"
+  style={{
+    height: 40,
+    width: "auto",
+    objectFit: "contain",
+    display: "block",
+  }}
+/>
             <div>
               <div style={{ fontWeight: 800 }}>Cardinal Vision AI</div>
               <div style={{ color: "#8F99B2", fontSize: 13 }}>

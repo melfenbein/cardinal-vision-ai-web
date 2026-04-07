@@ -140,27 +140,26 @@ export default function Home() {
   >
     <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
       <div
-        style={{
-          padding: 10,
-          borderRadius: 18,
-          background: "linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-          border: "1px solid rgba(255,255,255,0.08)",
-          boxShadow: "0 12px 36px rgba(0,0,0,0.25)",
-        }}
-      >
-    <img
-  src="/logo-wordmark.png"
-  alt="Cardinal"
   style={{
-    height: 120,
-    width: "auto",
-    objectFit: "contain",
-    display: "block",
-    filter: "drop-shadow(0 0 20px rgba(255,50,50,0.35))"
+    padding: 10,
+    borderRadius: 18,
+    background: "linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
+    border: "1px solid rgba(255,255,255,0.08)",
+    boxShadow: "0 12px 36px rgba(0,0,0,0.25)",
   }}
-/>
-        />
-      </div>
+>
+  <img
+    src="/logo-wordmark.png"
+    alt="Cardinal"
+    style={{
+      height: 120,
+      width: "auto",
+      objectFit: "contain",
+      display: "block",
+      filter: "drop-shadow(0 0 20px rgba(255,50,50,0.35))",
+    }}
+  />
+</div>
 
       <div>
         <div

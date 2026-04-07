@@ -79,16 +79,72 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
 
 function LogoLockup({ compact = false }: { compact?: boolean }) {
   return (
-    <div className={`logo-lockup ${compact ? "compact" : ""}`}>
-      <img src="/logo-icon.png" alt="Cardinal Vision AI" className="logo-icon" />
-      <div className="logo-copy">
-        <div className="logo-title">Cardinal Vision AI</div>
-        <div className="logo-subtitle">The decision layer for collectibles</div>
+    <>
+      <div className={`logo-lockup ${compact ? "compact" : ""}`}>
+        <img
+          src="/logo-icon.png"
+          alt="Cardinal Vision AI"
+          className="logo-icon"
+        />
+
+        <div className="logo-copy">
+          <div className="logo-title">Cardinal Vision AI</div>
+          <div className="logo-subtitle">
+            The decision layer for collectibles
+          </div>
+        </div>
       </div>
-    </div>
+
+      <style jsx>{`
+        .logo-lockup {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .logo-icon {
+          height: 52px; /* 🔥 BIGGER LOGO */
+          width: auto;
+          object-fit: contain;
+          display: block;
+          filter: drop-shadow(0 6px 18px rgba(239, 51, 64, 0.35));
+        }
+
+        .logo-copy {
+          display: flex;
+          flex-direction: column;
+          line-height: 1.05;
+        }
+
+        .logo-title {
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          color: #ffffff;
+        }
+
+        .logo-subtitle {
+          font-size: 13px;
+          color: #8f99b2;
+          margin-top: 4px;
+        }
+
+        /* Optional compact mode (if used elsewhere) */
+        .compact .logo-icon {
+          height: 40px;
+        }
+
+        .compact .logo-title {
+          font-size: 18px;
+        }
+
+        .compact .logo-subtitle {
+          font-size: 11px;
+        }
+      `}</style>
+    </>
   );
 }
-
 export default function Home() {
   return (
     <main className="page-shell">

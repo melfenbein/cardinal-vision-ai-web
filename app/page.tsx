@@ -57,7 +57,7 @@ const painPoints = [
 const advantages = [
   {
     title: "AI-first decisioning",
-    text: "Not just card identification. Cardinal is built to tell users what to do next.",
+    text: "Not just card identification. Cardinal is built to tell you what to do next.",
   },
   {
     title: "Built around EV",
@@ -941,7 +941,9 @@ export default function Home() {
             <SectionEyebrow>AI-powered collectibles intelligence</SectionEyebrow>
 
             <h1 className="display-title">
-              The fastest way to value, decide, and sell your cards.
+              <h1 className="display-title">
+  Turn your trading cards into liquid assets.
+</h1>
             </h1>
 
             <p className="lead" style={{ marginTop: 22 }}>

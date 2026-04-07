@@ -115,12 +115,12 @@ export default function Home() {
           'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
       }}
     >
-      <header
+   <header
   style={{
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "24px 32px",
+    padding: "18px 32px",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
     position: "sticky",
     top: 0,
@@ -138,62 +138,27 @@ export default function Home() {
       gap: 20,
     }}
   >
-    <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-      <div
-  style={{
-    padding: 10,
-    borderRadius: 18,
-    background: "linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-    border: "1px solid rgba(255,255,255,0.08)",
-    boxShadow: "0 12px 36px rgba(0,0,0,0.25)",
-  }}
->
-  <img
-    src="/logo-wordmark.png"
-    alt="Cardinal"
-    style={{
-      height: 120,
-      width: "auto",
-      objectFit: "contain",
-      display: "block",
-      filter: "drop-shadow(0 0 20px rgba(255,50,50,0.35))",
-    }}
-  />
-</div>
+    {/* LOGO ONLY */}
+    <img
+      src="/logo-wordmark.png"
+      alt="Cardinal"
+      style={{
+        height: 64,
+        width: "auto",
+        objectFit: "contain",
+        display: "block",
+      }}
+    />
 
-      <div>
-        <div
-          style={{
-            color: "white",
-            fontSize: 26,
-            fontWeight: 800,
-            letterSpacing: "-0.03em",
-            lineHeight: 1,
-          }}
-        >
-          Cardinal Vision AI
-        </div>
-        <div
-          style={{
-            color: "#98A3BC",
-            fontSize: 13,
-            marginTop: 6,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-          }}
-        >
-          Collectible liquidity platform
-        </div>
-      </div>
-    </div>
-
+    {/* NAV */}
     <div
       style={{
         display: "flex",
-        gap: 18,
+        gap: 22,
         alignItems: "center",
         color: "#D6DBE8",
         fontSize: 14,
+        fontWeight: 500,
       }}
     >
       <a href="#how" style={{ color: "inherit", textDecoration: "none" }}>
@@ -208,7 +173,6 @@ export default function Home() {
     </div>
   </div>
 </header>
-
       <section style={{ padding: "72px 0 48px" }}>
         <div
           style={{

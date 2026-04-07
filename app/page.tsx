@@ -136,7 +136,6 @@ export default function Home() {
       gap: 20,
     }}
   >
-    {/* LEFT: LOGO + BRAND */}
     <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
       <img
         src="/logo-icon.png"
@@ -145,15 +144,17 @@ export default function Home() {
           height: 36,
           width: "auto",
           objectFit: "contain",
+          display: "block",
         }}
       />
 
-      <div style={{ lineHeight: 1 }}>
+      <div style={{ lineHeight: 1.1 }}>
         <div
           style={{
             fontWeight: 800,
-            fontSize: 18,
+            fontSize: 20,
             letterSpacing: "-0.02em",
+            color: "#FFFFFF",
           }}
         >
           Cardinal Vision AI
@@ -162,7 +163,8 @@ export default function Home() {
           style={{
             fontSize: 12,
             color: "#8F99B2",
-            marginTop: 2,
+            marginTop: 4,
+            fontWeight: 500,
           }}
         >
           The decision layer for collectibles
@@ -170,33 +172,32 @@ export default function Home() {
       </div>
     </div>
 
-    {/* RIGHT: NAV + CTA */}
     <div
       style={{
         display: "flex",
         alignItems: "center",
         gap: 22,
-        fontSize: 14,
         color: "#D6DBE8",
+        fontSize: 14,
+        fontWeight: 500,
       }}
     >
-      <a href="#how" style={{ textDecoration: "none", color: "inherit" }}>
+      <a href="#how" style={{ color: "inherit", textDecoration: "none" }}>
         How it works
       </a>
-      <a href="#why" style={{ textDecoration: "none", color: "inherit" }}>
+      <a href="#why" style={{ color: "inherit", textDecoration: "none" }}>
         Why Cardinal
       </a>
-
-      {/* CTA */}
       <a
         href="#access"
         style={{
           padding: "10px 16px",
           borderRadius: 999,
-          background: "linear-gradient(135deg, #EF3340, #C71F3C)",
+          background: "linear-gradient(135deg, #EF3340 0%, #C71F3C 100%)",
           color: "#fff",
           fontWeight: 700,
           textDecoration: "none",
+          boxShadow: "0 10px 24px rgba(199,31,60,0.28)",
         }}
       >
         Early Access

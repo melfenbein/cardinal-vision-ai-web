@@ -944,7 +944,6 @@ export default function Home() {
               <h1 className="display-title">
   Turn your trading cards into liquid assets.
 </h1>
-            </h1>
 
             <p className="lead" style={{ marginTop: 22 }}>
               Cardinal combines AI grading probability, real-time valuation, and

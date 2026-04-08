@@ -944,6 +944,7 @@ export default function Home() {
               <h1 className="display-title">
   Turn your trading cards into liquid assets.
 </h1>
+            </h1>
 
             <p className="lead" style={{ marginTop: 22 }}>
               Cardinal combines AI grading probability, real-time valuation, and
@@ -1067,11 +1068,11 @@ export default function Home() {
           <h2 className="section-title">
             A major category still runs on friction, guesswork, and delay.
           </h2>
-  <p className="lead" style={{ maxWidth: 800, marginBottom: 30 }}>
-  Valuable cards often sit dormant because grading takes time, pricing is
-  inconsistent, and selling is fragmented. Cardinal is built to turn that
-  broken journey into one intelligent decision layer.
-</p>
+          <p className="lead" style={{ maxWidth: 800, marginBottom: 30 }}>
+            Valuable cards often sit dormant because grading takes time, pricing is
+            inconsistent, and selling is fragmented. Cardinal is built to turn that
+            broken journey into one intelligent decision layer.
+          </p>
 
           <div className="grid-3">
             {painPoints.map((item) => (
@@ -1251,6 +1252,14 @@ export default function Home() {
       </section>
 
       <footer className="footer">
+        <div className="container footer-inner">
+          <LogoLockup compact />
+          <div className="footer-copy">© 2026 Cardinal Vision AI</div>
+        </div>
+      </footer>
+    </main>
+  );
+}
         <div className="container footer-inner">
           <LogoLockup compact />
           <div className="footer-copy">© 2026 Cardinal Vision AI</div>

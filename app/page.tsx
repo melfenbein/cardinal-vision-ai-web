@@ -281,9 +281,9 @@ export default function Home() {
       >
         <div
           style={{
-            height: 84,
-            width: 84,
-            borderRadius: 22,
+            height: 108,
+            width: 108,
+            borderRadius: 28,
             display: "grid",
             placeItems: "center",
             background: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))",
@@ -296,8 +296,8 @@ export default function Home() {
             src="/logo-icon.png"
             alt="Cardinal"
             style={{
-              height: 54,
-              width: 54,
+              height: 74,
+              width: 74,
               objectFit: "contain",
               display: "block",
               filter: "drop-shadow(0 8px 20px rgba(239,51,64,0.32))",
@@ -308,7 +308,7 @@ export default function Home() {
         <div style={{ minWidth: 0 }}>
           <div
             style={{
-              fontSize: 26,
+              fontSize: 34,
               fontWeight: 900,
               letterSpacing: "-0.04em",
               lineHeight: 0.95,
@@ -320,7 +320,7 @@ export default function Home() {
           <div
             style={{
               marginTop: 6,
-              fontSize: 11,
+              fontSize: 13,
               fontWeight: 800,
               letterSpacing: "0.22em",
               textTransform: "uppercase",

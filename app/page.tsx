@@ -274,7 +274,7 @@ export default function Home() {
                 src="/logo.png"
                 alt="Cardinal"
                 style={{
-                  height: 112,
+                  height: 312,
                   width: "auto",
                   objectFit: "contain",
                   display: "block",

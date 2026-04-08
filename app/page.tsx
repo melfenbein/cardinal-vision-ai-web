@@ -245,7 +245,7 @@ export default function Home() {
     position: "sticky",
     top: 0,
     zIndex: 60,
-    paddingTop: 18,
+    paddingTop: 0,
   }}
 >
   <header

@@ -240,81 +240,185 @@ function InfoCard({ title, text }: { title: string; text: string }) {
 export default function Home() {
   return (
     <main style={pageStyle}>
-      <div
+     <div
+  style={{
+    position: "sticky",
+    top: 0,
+    zIndex: 60,
+    paddingTop: 18,
+  }}
+>
+  <header
+    style={{
+      width: "min(1280px, calc(100% - 28px))",
+      margin: "0 auto",
+      borderRadius: 28,
+      padding: "18px 24px",
+      background: "rgba(8, 14, 28, 0.82)",
+      border: "1px solid rgba(255,255,255,0.12)",
+      backdropFilter: "blur(20px)",
+      boxShadow: "0 22px 60px rgba(0,0,0,0.34)",
+    }}
+  >
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "auto 1fr auto",
+        alignItems: "center",
+        gap: 24,
+      }}
+    >
+      <a
+        href="#"
         style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 50,
-          paddingTop: 14,
+          display: "flex",
+          alignItems: "center",
+          gap: 18,
+          textDecoration: "none",
+          color: "#fff",
+          minWidth: 0,
         }}
       >
-        <header
+        <div
           style={{
-            width: "min(1240px, calc(100% - 24px))",
-            margin: "0 auto",
+            height: 84,
+            width: 84,
             borderRadius: 22,
-            padding: "14px 18px",
-            background: "rgba(8, 14, 28, 0.72)",
-            border: "1px solid rgba(255,255,255,0.1)",
-            backdropFilter: "blur(18px)",
-            boxShadow: "0 18px 50px rgba(0,0,0,0.28)",
+            display: "grid",
+            placeItems: "center",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))",
+            border: "1px solid rgba(255,255,255,0.12)",
+            boxShadow: "0 16px 32px rgba(0,0,0,0.24)",
+            flexShrink: 0,
           }}
         >
+          <img
+            src="/logo-icon.png"
+            alt="Cardinal"
+            style={{
+              height: 54,
+              width: 54,
+              objectFit: "contain",
+              display: "block",
+              filter: "drop-shadow(0 8px 20px rgba(239,51,64,0.32))",
+            }}
+          />
+        </div>
+
+        <div style={{ minWidth: 0 }}>
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 20,
-              flexWrap: "wrap",
+              fontSize: 26,
+              fontWeight: 900,
+              letterSpacing: "-0.04em",
+              lineHeight: 0.95,
+              color: "#FFFFFF",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <img
-                src="/logo.png"
-                alt="Cardinal"
-                style={{
-                  height: 312,
-                  width: "auto",
-                  objectFit: "contain",
-                  display: "block",
-                }}
-              />
-            </div>
-
-            <nav
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 22,
-                color: "#DCE3EF",
-                fontSize: 14,
-                fontWeight: 600,
-                flexWrap: "wrap",
-              }}
-            >
-              <a href="#how" style={navLinkStyle}>
-                How It Works
-              </a>
-              <a href="#why" style={navLinkStyle}>
-                Why Cardinal
-              </a>
-              <a href="#engine" style={navLinkStyle}>
-                Cardinal Engine
-              </a>
-              <a href="#founder" style={navLinkStyle}>
-                Founder
-              </a>
-              <a href="#vision" style={navLinkStyle}>
-                Vision
-              </a>
-              <a href="#access" style={buttonPrimary}>
-                Get Access
-              </a>
-            </nav>
+            Cardinal
           </div>
-        </header>
+          <div
+            style={{
+              marginTop: 6,
+              fontSize: 11,
+              fontWeight: 800,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "#AAB6CB",
+            }}
+          >
+            Vision AI · Cardinal Engine
+          </div>
+        </div>
+      </a>
+
+      <nav
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 26,
+          color: "#DCE3EF",
+          fontSize: 15,
+          fontWeight: 700,
+          flexWrap: "wrap",
+        }}
+      >
+        <a href="#how" style={{ ...navLinkStyle, padding: "10px 0" }}>
+          How It Works
+        </a>
+        <a href="#why" style={{ ...navLinkStyle, padding: "10px 0" }}>
+          Why Cardinal
+        </a>
+        <a href="#engine" style={{ ...navLinkStyle, padding: "10px 0" }}>
+          Cardinal Engine
+        </a>
+        <a href="#founder" style={{ ...navLinkStyle, padding: "10px 0" }}>
+          Founder
+        </a>
+        <a href="#vision" style={{ ...navLinkStyle, padding: "10px 0" }}>
+          Vision
+        </a>
+      </nav>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          gap: 12,
+        }}
+      >
+        <a
+          href="#engine"
+          style={{
+            appearance: "none",
+            border: "1px solid rgba(255,255,255,0.12)",
+            cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: 54,
+            padding: "0 20px",
+            borderRadius: 999,
+            fontSize: 14,
+            fontWeight: 800,
+            color: "#FFFFFF",
+            background: "rgba(255,255,255,0.05)",
+            textDecoration: "none",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Explore Engine
+        </a>
+
+        <a
+          href="#access"
+          style={{
+            appearance: "none",
+            border: 0,
+            cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: 56,
+            padding: "0 24px",
+            borderRadius: 999,
+            fontSize: 15,
+            fontWeight: 900,
+            color: "#fff",
+            background: "linear-gradient(135deg, #EF3340 0%, #C81E39 100%)",
+            boxShadow: "0 18px 40px rgba(200, 30, 57, 0.38)",
+            textDecoration: "none",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Get Access
+        </a>
       </div>
+    </div>
+  </header>
+</div>
 
       <section style={{ padding: "56px 0 52px" }}>
         <div

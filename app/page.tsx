@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import React from "react";
 
@@ -12,31 +12,95 @@ const featuredCards = [
   { src: "/celebrini.jpg", label: "Celebrini" },
 ];
 
-const steps = [
+const howSteps = [
   {
     num: "01",
-    title: "Scan the card",
-    text: "Use a phone camera or upload an image to identify the card and extract key metadata instantly.",
+    title: "Identify the asset",
+    text: "Use a phone camera or upload an image to identify the card instantly and structure the underlying metadata.",
   },
   {
     num: "02",
-    title: "Predict the grade",
-    text: "Estimate likely grading outcomes before you submit, reducing uncertainty and wasted time.",
+    title: "Model grade outcomes",
+    text: "Cardinal Engine estimates likely grading outcomes before capital, time, or submission fees are committed.",
   },
   {
     num: "03",
-    title: "Understand value",
-    text: "Blend grade probability with live comps and expected-value logic to see what the card is really worth.",
+    title: "Determine value",
+    text: "Grade probability, live comps, and expected-value logic work together to estimate true economic value.",
   },
   {
     num: "04",
-    title: "See executable offers",
-    text: "Surface real liquidity options when the economics make sense instead of forcing users into one path.",
+    title: "Surface liquidity options",
+    text: "Reveal executable pathways across grading, direct offers, dealer sales, and marketplace liquidity when the economics justify action.",
   },
   {
     num: "05",
     title: "Route intelligently",
-    text: "Choose the best next action across grading, marketplace sale, dealer sale, or direct offer.",
+    text: "Choose the optimal next step based on return potential, speed, risk, and execution quality.",
+  },
+];
+
+const enginePillars = [
+  {
+    title: "Grade Probability",
+    text: "Predict likely grading bands before submission and reduce decision-making under uncertainty.",
+  },
+  {
+    title: "Pricing Intelligence",
+    text: "Continuously interpret market signals, comps, and condition-sensitive value ranges.",
+  },
+  {
+    title: "Expected Value Logic",
+    text: "Model the economics of hold, grade, sell, or route based on the asset and current market conditions.",
+  },
+  {
+    title: "Liquidity Routing",
+    text: "Direct assets toward the highest-quality execution path rather than forcing every user into one destination.",
+  },
+];
+
+const infrastructureComparisons = [
+  [
+    "Traditional grading",
+    "A single destination with no built-in intelligence around valuation, liquidity, underwriting, or best execution.",
+  ],
+  [
+    "Marketplaces",
+    "Useful for distribution, but fragmented, manual, and often disconnected from grade probability and economic decision-making.",
+  ],
+  [
+    "Cardinal + Cardinal Engine",
+    "A unified decision and execution layer combining pricing intelligence, grade modeling, and liquidity routing in one system.",
+  ],
+  [
+    "Strategic advantage",
+    "A layer that can sit above grading, marketplaces, dealers, and buyers to improve pricing quality and execution efficiency across the ecosystem.",
+  ],
+];
+
+const founderStats = [
+  ["$484M exit", "Built and scaled a leading digital platform to strategic acquisition."],
+  ["$500M+ IPO", "Led growth and go-to-market efforts at public-market scale."],
+  ["Enterprise AI", "Deep experience deploying AI and commerce solutions with major enterprises."],
+  ["Marketplace DNA", "Background across pricing, demand creation, monetization, and transaction-driven platforms."],
+];
+
+const visionCards = [
+  {
+    title: "Infrastructure thesis",
+    text: "Collectibles still lack a true decision and execution layer. Cardinal is built to become that missing infrastructure.",
+  },
+  {
+    title: "Economic intelligence",
+    text: "Cardinal Engine is designed to tell the market not just what an asset is, but what should happen next.",
+  },
+  {
+    title: "Trust and quality",
+    text: "A premium experience for collectors, partners, dealers, and future market participants.",
+  },
+  {
+    title: "Platform expansion",
+    text: "Starts with cards. Expands into the broader pricing, underwriting, and liquidity backbone for collectibles.",
   },
 ];
 
@@ -62,7 +126,7 @@ const glassStyle: React.CSSProperties = {
 };
 
 const sectionStyle: React.CSSProperties = {
-  padding: "88px 0",
+  padding: "92px 0",
 };
 
 const sectionTitleStyle: React.CSSProperties = {
@@ -70,12 +134,12 @@ const sectionTitleStyle: React.CSSProperties = {
   fontSize: "clamp(34px, 5vw, 58px)",
   lineHeight: 0.96,
   letterSpacing: "-0.05em",
-  maxWidth: 820,
+  maxWidth: 880,
 };
 
 const leadStyle: React.CSSProperties = {
   margin: 0,
-  maxWidth: 760,
+  maxWidth: 780,
   color: "#CBD4E3",
   fontSize: "clamp(18px, 2.1vw, 21px)",
   lineHeight: 1.7,
@@ -119,6 +183,12 @@ const buttonSecondary: React.CSSProperties = {
   color: "#fff",
   background: "rgba(255,255,255,0.05)",
   textDecoration: "none",
+};
+
+const navLinkStyle: React.CSSProperties = {
+  color: "inherit",
+  textDecoration: "none",
+  opacity: 0.96,
 };
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
@@ -204,7 +274,7 @@ export default function Home() {
                 src="/logo.png"
                 alt="Cardinal"
                 style={{
-                  height: 52,
+                  height: 60,
                   width: "auto",
                   objectFit: "contain",
                   display: "block",
@@ -223,52 +293,69 @@ export default function Home() {
                 flexWrap: "wrap",
               }}
             >
-              <a href="#how" style={{ color: "inherit", textDecoration: "none" }}>
-                How it works
+              <a href="#how" style={navLinkStyle}>
+                How It Works
               </a>
-              <a href="#why" style={{ color: "inherit", textDecoration: "none" }}>
+              <a href="#why" style={navLinkStyle}>
                 Why Cardinal
               </a>
-              <a href="#vision" style={{ color: "inherit", textDecoration: "none" }}>
+              <a href="#engine" style={navLinkStyle}>
+                Cardinal Engine
+              </a>
+              <a href="#founder" style={navLinkStyle}>
+                Founder
+              </a>
+              <a href="#vision" style={navLinkStyle}>
                 Vision
               </a>
               <a href="#access" style={buttonPrimary}>
-                Early Access
+                Get Access
               </a>
             </nav>
           </div>
         </header>
       </div>
 
-      <section style={{ padding: "54px 0 48px" }}>
+      <section style={{ padding: "56px 0 52px" }}>
         <div
           style={{
             ...containerStyle,
             display: "grid",
-            gridTemplateColumns: "1.06fr 0.94fr",
+            gridTemplateColumns: "1.08fr 0.92fr",
             gap: 34,
             alignItems: "stretch",
           }}
         >
           <div style={{ paddingTop: 28 }}>
-            <SectionEyebrow>AI-powered collectibles intelligence</SectionEyebrow>
+            <SectionEyebrow>Powered by Cardinal Engine</SectionEyebrow>
 
             <h1
               style={{
                 margin: 0,
-                fontSize: "clamp(42px, 7.2vw, 84px)",
-                lineHeight: 0.94,
-                letterSpacing: "-0.055em",
-                maxWidth: 760,
+                fontSize: "clamp(44px, 7vw, 84px)",
+                lineHeight: 0.93,
+                letterSpacing: "-0.06em",
+                maxWidth: 780,
               }}
             >
-              The fastest way to value, decide, and sell your cards.
+              The Decision Layer for Collectibles
             </h1>
 
             <p style={{ ...leadStyle, marginTop: 22 }}>
-              Cardinal combines AI grading probability, real-time valuation, and
-              intelligent liquidity routing to help collectors understand what
-              their cards are worth and what to do next.
+              Powered by Cardinal Engine, Cardinal predicts grade, estimates value,
+              and determines the optimal path to liquidity from a single scan.
+            </p>
+
+            <p
+              style={{
+                marginTop: 16,
+                color: "#E6EBF5",
+                fontSize: 15,
+                fontWeight: 700,
+                letterSpacing: "0.01em",
+              }}
+            >
+              A new infrastructure layer for a fragmented asset class.
             </p>
 
             <div
@@ -280,10 +367,10 @@ export default function Home() {
               }}
             >
               <a href="#access" style={buttonPrimary}>
-                Request Early Access
+                Get Early Access
               </a>
-              <a href="#how" style={buttonSecondary}>
-                See How It Works
+              <a href="#engine" style={buttonSecondary}>
+                Explore Cardinal Engine
               </a>
             </div>
 
@@ -293,13 +380,22 @@ export default function Home() {
                 gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
                 gap: 14,
                 marginTop: 34,
-                maxWidth: 760,
+                maxWidth: 780,
               }}
             >
               {[
-                ["AI-led", "Grade probability, pricing intelligence, and smart routing in one workflow."],
-                ["Instant clarity", "See the likely economics before you spend time or money."],
-                ["Built for liquidity", "Go from scan to actionable next step with less friction."],
+                [
+                  "Cardinal Engine",
+                  "A proprietary system that evaluates grade probability, pricing, and execution in real time.",
+                ],
+                [
+                  "Economic clarity",
+                  "Understand expected value before committing time, capital, or grading fees.",
+                ],
+                [
+                  "Liquidity routing",
+                  "Route assets to the highest-value outcome across grading, marketplaces, and direct offers.",
+                ],
               ].map(([title, text]) => (
                 <div
                   key={title}
@@ -318,7 +414,14 @@ export default function Home() {
                   >
                     {title}
                   </div>
-                  <div style={{ color: "#AAB6CB", fontSize: 14, lineHeight: 1.55, marginTop: 6 }}>
+                  <div
+                    style={{
+                      color: "#AAB6CB",
+                      fontSize: 14,
+                      lineHeight: 1.55,
+                      marginTop: 6,
+                    }}
+                  >
                     {text}
                   </div>
                 </div>
@@ -391,6 +494,7 @@ export default function Home() {
                 justifyContent: "space-between",
                 gap: 16,
                 marginBottom: 18,
+                flexWrap: "wrap",
               }}
             >
               <div
@@ -406,10 +510,10 @@ export default function Home() {
                   border: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
-                Live product vision
+                Powered by Cardinal Engine
               </div>
               <div style={{ color: "#D7DEEB", fontSize: 14, fontWeight: 600 }}>
-                Card-to-liquidity workflow
+                From scan to execution
               </div>
             </div>
 
@@ -421,7 +525,7 @@ export default function Home() {
                 marginBottom: 18,
               }}
             >
-              {["Scan", "AI Grade", "Value", "Offer", "Route"].map((step, index) => (
+              {["Identify", "Model", "Price", "Offer", "Route"].map((step, index) => (
                 <div
                   key={step}
                   style={{
@@ -475,7 +579,7 @@ export default function Home() {
                     src="/logo.png"
                     alt="Cardinal"
                     style={{
-                      height: 74,
+                      height: 84,
                       width: "auto",
                       objectFit: "contain",
                       display: "block",
@@ -486,18 +590,26 @@ export default function Home() {
                 <div>
                   <h3
                     style={{
-                      fontSize: 26,
+                      fontSize: 28,
                       fontWeight: 800,
                       letterSpacing: "-0.04em",
                       margin: "0 0 10px",
                     }}
                   >
-                    Premium decision engine
+                    Cardinal Engine
                   </h3>
 
-                  <p style={{ color: "#AAB6CB", lineHeight: 1.6, fontSize: 14, margin: "0 0 14px" }}>
-                    A front-end experience collectors can trust with an economic
-                    engine underneath that evaluates value, risk, and best execution.
+                  <p
+                    style={{
+                      color: "#AAB6CB",
+                      lineHeight: 1.6,
+                      fontSize: 14,
+                      margin: "0 0 14px",
+                    }}
+                  >
+                    Cardinal Engine is a proprietary decision system that evaluates
+                    value, risk, and execution — transforming collectibles from
+                    static assets into programmable financial outcomes.
                   </p>
 
                   {[
@@ -515,7 +627,9 @@ export default function Home() {
                         alignItems: "center",
                         padding: "12px 0",
                         borderBottom:
-                          index === arr.length - 1 ? "none" : "1px solid rgba(255,255,255,0.08)",
+                          index === arr.length - 1
+                            ? "none"
+                            : "1px solid rgba(255,255,255,0.08)",
                       }}
                     >
                       <span style={{ color: "#AAB6CB", fontSize: 14 }}>{label}</span>
@@ -525,20 +639,49 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div
+              style={{
+                marginTop: 18,
+                display: "grid",
+                gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                gap: 12,
+              }}
+            >
+              {[
+                ["Pricing", "Live market logic"],
+                ["Decisioning", "Expected-value driven"],
+                ["Liquidity", "Multi-path execution"],
+              ].map(([title, text]) => (
+                <div
+                  key={title}
+                  style={{
+                    borderRadius: 20,
+                    padding: 14,
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: 14 }}>{title}</div>
+                  <div style={{ ...mutedStyle, fontSize: 13, marginTop: 4 }}>{text}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="why" style={{ padding: "76px 0" }}>
+      <section id="why" style={{ padding: "82px 0" }}>
         <div style={containerStyle}>
           <SectionEyebrow>Why now</SectionEyebrow>
           <h2 style={sectionTitleStyle}>
-            A major category still runs on friction, guesswork, and delay.
+            A fragmented asset class is missing its decision layer.
           </h2>
-          <p style={{ ...leadStyle, maxWidth: 800, marginBottom: 30 }}>
-            Valuable cards often sit dormant because grading takes time, pricing is
-            inconsistent, and selling is fragmented. Cardinal is built to turn that
-            broken journey into one intelligent decision layer.
+          <p style={{ ...leadStyle, maxWidth: 850, marginBottom: 30 }}>
+            Collectibles represent a large and growing asset class, yet pricing,
+            grading, and liquidity remain fragmented and inefficient. Cardinal,
+            powered by Cardinal Engine, is built to unify these functions into a
+            single decision and execution layer.
           </p>
 
           <div
@@ -550,15 +693,15 @@ export default function Home() {
           >
             <InfoCard
               title="Pricing is fragmented"
-              text="Collectors bounce across apps, comps, and gut instinct to figure out what a card might be worth."
+              text="Collectors, dealers, and buyers move across comps, marketplaces, auctions, and instinct just to estimate value."
             />
             <InfoCard
-              title="Grading is a gamble"
-              text="Submission decisions often happen without enough clarity on likely outcomes or expected value."
+              title="Grading lacks decision support"
+              text="Submission decisions are frequently made without enough clarity on likely outcomes, risk, or expected return."
             />
             <InfoCard
               title="Liquidity is inefficient"
-              text="The best path to monetize a card is usually hard to discover, slow to execute, and overly manual."
+              text="The best monetization path is often unclear, manual, and disconnected from the economics of the asset itself."
             />
           </div>
         </div>
@@ -575,11 +718,11 @@ export default function Home() {
       >
         <div style={containerStyle}>
           <SectionEyebrow>How it works</SectionEyebrow>
-          <h2 style={sectionTitleStyle}>From card image to best next action.</h2>
-          <p style={{ ...leadStyle, maxWidth: 820, marginBottom: 30 }}>
-            Cardinal’s workflow is simple on the surface and powerful under the hood:
-            identify the asset, estimate grade outcomes, understand the economics,
-            and route to the best liquidity path.
+          <h2 style={sectionTitleStyle}>From Asset Identification to Execution</h2>
+          <p style={{ ...leadStyle, maxWidth: 850, marginBottom: 30 }}>
+            Cardinal Engine converts a single card image into a structured economic
+            decision — combining identification, grade probability, pricing
+            intelligence, and liquidity routing in one system.
           </p>
 
           <div
@@ -589,7 +732,7 @@ export default function Home() {
               gap: 16,
             }}
           >
-            {steps.map((step) => (
+            {howSteps.map((step) => (
               <div
                 key={step.num}
                 style={{ ...glassStyle, borderRadius: 24, padding: 24 }}
@@ -622,6 +765,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="engine" style={sectionStyle}>
+        <div
+          style={{
+            ...containerStyle,
+            display: "grid",
+            gridTemplateColumns: "0.98fr 1.02fr",
+            gap: 24,
+            alignItems: "start",
+          }}
+        >
+          <div>
+            <SectionEyebrow>Cardinal Engine</SectionEyebrow>
+            <h2 style={sectionTitleStyle}>
+              The proprietary intelligence layer behind every decision.
+            </h2>
+            <p style={{ ...leadStyle, maxWidth: 720 }}>
+              Cardinal Engine is designed to evaluate collectible assets through
+              the lens of probability, pricing, and execution. It does not simply
+              identify what an asset is — it helps determine what should happen next.
+            </p>
+
+            <p style={{ ...mutedStyle, marginTop: 18, maxWidth: 720 }}>
+              Over time, Cardinal Engine can evolve into the pricing, decisioning,
+              and liquidity backbone for the collectibles ecosystem.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+              gap: 16,
+            }}
+          >
+            {enginePillars.map((item) => (
+              <InfoCard key={item.title} title={item.title} text={item.text} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section style={sectionStyle}>
         <div
           style={{
@@ -634,40 +818,25 @@ export default function Home() {
         >
           <div>
             <SectionEyebrow>Why Cardinal</SectionEyebrow>
-            <h2 style={sectionTitleStyle}>
-              More than grading. Built for decision-making.
-            </h2>
-            <p style={{ ...leadStyle, maxWidth: 700 }}>
-              Traditional grading services answer one question. Cardinal helps answer
-              the bigger ones: what is this card worth, what is the best move, and
-              how should I execute?
+            <h2 style={sectionTitleStyle}>The Missing Infrastructure Layer</h2>
+            <p style={{ ...leadStyle, maxWidth: 720 }}>
+              Existing solutions address individual steps — grading, marketplaces,
+              or pricing. Cardinal integrates these into a unified system powered
+              by Cardinal Engine, enabling faster decisions, better pricing, and
+              more efficient liquidity across the ecosystem.
             </p>
           </div>
 
           <div style={{ ...glassStyle, borderRadius: 30, overflow: "hidden" }}>
-            {[
-              [
-                "Traditional grading",
-                "One destination, one outcome, and no built-in intelligence around liquidity or best execution.",
-              ],
-              [
-                "Cardinal",
-                "Pricing intelligence, grade probability, optional offers, and routing logic in one premium experience.",
-              ],
-              [
-                "For collectors",
-                "More confidence, more speed, and better decision quality before spending money on grading or listing.",
-              ],
-              [
-                "For buyers and partners",
-                "Better-qualified supply, stronger underwriting, and improved pricing signals entering the market.",
-              ],
-            ].map(([title, text], i) => (
+            {infrastructureComparisons.map(([title, text], i) => (
               <div
                 key={title}
                 style={{
                   padding: "22px 24px",
-                  borderBottom: i === 3 ? "none" : "1px solid rgba(255,255,255,0.08)",
+                  borderBottom:
+                    i === infrastructureComparisons.length - 1
+                      ? "none"
+                      : "1px solid rgba(255,255,255,0.08)",
                 }}
               >
                 <div
@@ -675,7 +844,10 @@ export default function Home() {
                     fontSize: 17,
                     fontWeight: 800,
                     marginBottom: 6,
-                    color: title === "Cardinal" ? "#FFB2BB" : "#FFFFFF",
+                    color:
+                      title === "Cardinal + Cardinal Engine"
+                        ? "#FFB2BB"
+                        : "#FFFFFF",
                   }}
                 >
                   {title}
@@ -687,16 +859,98 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="vision" style={{ padding: "76px 0" }}>
+      <section
+        id="founder"
+        style={{
+          ...sectionStyle,
+          background: "rgba(255,255,255,0.02)",
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
+        <div
+          style={{
+            ...containerStyle,
+            display: "grid",
+            gridTemplateColumns: "0.96fr 1.04fr",
+            gap: 28,
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <SectionEyebrow>Founder</SectionEyebrow>
+
+            <h2 style={sectionTitleStyle}>
+              Built by operators who have scaled and exited.
+            </h2>
+
+            <p style={{ ...leadStyle, maxWidth: 720 }}>
+              Cardinal is being built with the discipline of enterprise AI, SaaS,
+              and marketplace platforms that have scaled to public markets and
+              strategic exits.
+            </p>
+
+            <p style={{ ...mutedStyle, marginTop: 16, maxWidth: 720 }}>
+              This is not a hobbyist product thesis. It is a deliberate effort to
+              build a category-defining infrastructure layer in collectibles,
+              informed by real operating experience across growth, monetization,
+              partnerships, and market creation.
+            </p>
+
+            <div
+              style={{
+                marginTop: 22,
+                fontWeight: 800,
+                fontSize: 15,
+                color: "#F4F7FB",
+              }}
+            >
+              Proven operator DNA. Market-scale ambition.
+            </div>
+          </div>
+
+          <div
+            style={{
+              ...glassStyle,
+              borderRadius: 30,
+              padding: 26,
+            }}
+          >
+            <div style={{ fontSize: 14, color: "#AAB6CB", marginBottom: 12 }}>
+              Track record
+            </div>
+
+            {founderStats.map(([title, text], i) => (
+              <div
+                key={title}
+                style={{
+                  padding: "15px 0",
+                  borderBottom:
+                    i === founderStats.length - 1
+                      ? "none"
+                      : "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <div style={{ fontWeight: 800, marginBottom: 4, fontSize: 16 }}>
+                  {title}
+                </div>
+                <div style={{ ...mutedStyle, fontSize: 14 }}>{text}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" style={{ padding: "82px 0" }}>
         <div style={containerStyle}>
           <SectionEyebrow>The bigger vision</SectionEyebrow>
           <h2 style={sectionTitleStyle}>
-            Every major asset class gets a pricing and execution layer.
+            Every important asset class develops a decision layer.
           </h2>
-          <p style={{ ...leadStyle, maxWidth: 820, marginBottom: 30 }}>
+          <p style={{ ...leadStyle, maxWidth: 860, marginBottom: 30 }}>
             Stocks have Bloomberg. Real estate has Zillow. Autos have Carvana.
-            Cardinal is built to become the intelligence and liquidity layer for
-            collectibles.
+            Collectibles still lack a true decision and execution layer. Cardinal,
+            powered by Cardinal Engine, is built to become that infrastructure.
           </p>
 
           <div
@@ -706,22 +960,9 @@ export default function Home() {
               gap: 16,
             }}
           >
-            <InfoCard
-              title="AI-first decisioning"
-              text="Not just card identification. Cardinal is built to tell users what to do next."
-            />
-            <InfoCard
-              title="Built around EV"
-              text="Grade probability, pricing, offers, and routing work together as one economic engine."
-            />
-            <InfoCard
-              title="Designed for premium trust"
-              text="A cleaner, more credible front-end experience for collectors and partners alike."
-            />
-            <InfoCard
-              title="Extensible platform"
-              text="Starts with cards. Expands into the broader pricing and execution layer for collectibles."
-            />
+            {visionCards.map((item) => (
+              <InfoCard key={item.title} title={item.title} text={item.text} />
+            ))}
           </div>
         </div>
       </section>
@@ -734,20 +975,20 @@ export default function Home() {
             borderRadius: 34,
             padding: 30,
             display: "grid",
-            gridTemplateColumns: "1.05fr 0.95fr",
+            gridTemplateColumns: "1.04fr 0.96fr",
             gap: 28,
             alignItems: "center",
           }}
         >
           <div>
             <SectionEyebrow>Early access</SectionEyebrow>
-            <h2 style={{ ...sectionTitleStyle, maxWidth: 680 }}>
-              Be first to experience Cardinal.
+            <h2 style={{ ...sectionTitleStyle, maxWidth: 700 }}>
+              Get early access to the future of collectibles.
             </h2>
-            <p style={{ ...leadStyle, maxWidth: 700 }}>
-              Join the early access list to get launch updates, product news,
-              partnership announcements, and early platform access as Cardinal
-              rolls out the next generation of collectible intelligence and liquidity.
+            <p style={{ ...leadStyle, maxWidth: 740 }}>
+              Join the early access list for launch updates, product milestones,
+              partner announcements, and first access as Cardinal rolls out a new
+              decision layer for collectibles powered by Cardinal Engine.
             </p>
           </div>
 
@@ -761,7 +1002,15 @@ export default function Home() {
               border: "1px solid rgba(255,255,255,0.1)",
             }}
           >
-            <label style={{ display: "block", marginBottom: 14, color: "#DDE4EF", fontSize: 14, fontWeight: 600 }}>
+            <label
+              style={{
+                display: "block",
+                marginBottom: 14,
+                color: "#DDE4EF",
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
               Name
               <input
                 type="text"
@@ -782,7 +1031,15 @@ export default function Home() {
               />
             </label>
 
-            <label style={{ display: "block", marginBottom: 14, color: "#DDE4EF", fontSize: 14, fontWeight: 600 }}>
+            <label
+              style={{
+                display: "block",
+                marginBottom: 14,
+                color: "#DDE4EF",
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
               Email
               <input
                 type="email"
@@ -803,11 +1060,19 @@ export default function Home() {
               />
             </label>
 
-            <label style={{ display: "block", marginBottom: 16, color: "#DDE4EF", fontSize: 14, fontWeight: 600 }}>
-              I’m interested as a...
+            <label
+              style={{
+                display: "block",
+                marginBottom: 16,
+                color: "#DDE4EF",
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
+              I’m joining as a...
               <select
                 name="interest"
-                defaultValue="Collector"
+                defaultValue="Investor"
                 style={{
                   width: "100%",
                   marginTop: 8,
@@ -821,15 +1086,16 @@ export default function Home() {
                   outline: "none",
                 }}
               >
+                <option>Investor</option>
                 <option>Collector</option>
                 <option>Dealer</option>
                 <option>Marketplace partner</option>
-                <option>Investor</option>
+                <option>Strategic partner</option>
               </select>
             </label>
 
             <button type="submit" style={{ ...buttonPrimary, width: "100%" }}>
-              Request Early Access
+              Get Early Access
             </button>
 
             <div
@@ -840,7 +1106,8 @@ export default function Home() {
                 lineHeight: 1.6,
               }}
             >
-              Replace this later with a real Formspree, HubSpot, or Typeform endpoint.
+              We’ll only use your information to share product updates and access
+              details.
             </div>
           </form>
         </div>
@@ -848,7 +1115,7 @@ export default function Home() {
 
       <footer
         style={{
-          padding: "28px 0 42px",
+          padding: "30px 0 44px",
           borderTop: "1px solid rgba(255,255,255,0.08)",
         }}
       >
@@ -862,18 +1129,42 @@ export default function Home() {
             flexWrap: "wrap",
           }}
         >
-          <img
-            src="/logo.png"
-            alt="Cardinal"
+          <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+            <img
+              src="/logo.png"
+              alt="Cardinal"
+              style={{
+                height: 46,
+                width: "auto",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+            <div style={{ color: "#8F99B2", fontSize: 14 }}>
+              Decision and liquidity infrastructure for collectibles.
+            </div>
+          </div>
+
+          <div
             style={{
-              height: 42,
-              width: "auto",
-              objectFit: "contain",
-              display: "block",
+              display: "flex",
+              alignItems: "center",
+              gap: 18,
+              flexWrap: "wrap",
+              color: "#8F99B2",
+              fontSize: 14,
             }}
-          />
-          <div style={{ color: "#8F99B2", fontSize: 14 }}>
-            © 2026 Cardinal Vision AI
+          >
+            <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+              Privacy
+            </a>
+            <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+              Terms
+            </a>
+            <a href="mailto:hello@cardinalvision.ai" style={{ color: "inherit", textDecoration: "none" }}>
+              Contact
+            </a>
+            <span>© 2026 Cardinal Vision AI</span>
           </div>
         </div>
       </footer>

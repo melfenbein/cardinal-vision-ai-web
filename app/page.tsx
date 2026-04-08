@@ -1067,8 +1067,10 @@ export default function Home() {
           <h2 className="section-title">
             A major category still runs on friction, guesswork, and delay.
           </h2>
-         <p className="lead" style={{ maxWidth: 800, marginBottom: 30 }}>
-  Millions of trading cards sit ungraded, undervalued, and illiquid. Today’s market is slow, fragmented, and driven by guesswork. Cardinal transforms that into a real-time pricing and liquidity engine — helping collectors understand true value and act on it instantly.
+  <p className="lead" style={{ maxWidth: 800, marginBottom: 30 }}>
+  Valuable cards often sit dormant because grading takes time, pricing is
+  inconsistent, and selling is fragmented. Cardinal is built to turn that
+  broken journey into one intelligent decision layer.
 </p>
 
           <div className="grid-3">

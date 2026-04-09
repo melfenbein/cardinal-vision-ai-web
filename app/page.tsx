@@ -240,42 +240,38 @@ function InfoCard({ title, text }: { title: string; text: string }) {
 export default function Home() {
   return (
     <main style={pageStyle}>
-  <div
+ <div
   style={{
     position: "sticky",
     top: 0,
     zIndex: 60,
-    paddingTop: 0,
   }}
 >
   <header
     style={{
-      width: "min(1320px, calc(100% - 20px))",
-      margin: "0 auto",
-      borderRadius: 24,
-      padding: "10px 24px",
-      background: "rgba(8, 14, 28, 0.86)",
-      border: "1px solid rgba(255,255,255,0.12)",
-      backdropFilter: "blur(20px)",
-      boxShadow: "0 22px 60px rgba(0,0,0,0.34)",
+      width: "100%",
+      padding: "6px 20px",
+      background: "rgba(8, 14, 28, 0.92)",
+      borderBottom: "1px solid rgba(255,255,255,0.08)",
+      backdropFilter: "blur(16px)",
     }}
   >
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "auto 1fr auto",
+        maxWidth: 1320,
+        margin: "0 auto",
+        display: "flex",
         alignItems: "center",
-        gap: 24,
+        justifyContent: "space-between",
+        gap: 20,
       }}
     >
+      {/* LOGO — NOW DOMINANT */}
       <a
         href="#"
         style={{
           display: "flex",
           alignItems: "center",
-          textDecoration: "none",
-          color: "#fff",
-          minWidth: 0,
           flexShrink: 0,
         }}
       >
@@ -283,95 +279,45 @@ export default function Home() {
           src="/logo.png"
           alt="Cardinal"
           style={{
-            height: 132,
+            height: 160,
             width: "auto",
             objectFit: "contain",
             display: "block",
-            filter: "drop-shadow(0 14px 32px rgba(239,51,64,0.34))",
+            filter: "drop-shadow(0 16px 36px rgba(239,51,64,0.35))",
           }}
         />
       </a>
 
+      {/* NAV */}
       <nav
         style={{
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
-          gap: 20,
-          color: "#DCE3EF",
-          fontSize: 14,
+          gap: 18,
+          fontSize: 13,
           fontWeight: 600,
-          flexWrap: "wrap",
+          color: "#DCE3EF",
         }}
       >
-        <a href="#how" style={{ ...navLinkStyle, padding: "10px 0" }}>
-          How It Works
-        </a>
-        <a href="#why" style={{ ...navLinkStyle, padding: "10px 0" }}>
-          Why Cardinal
-        </a>
-        <a href="#engine" style={{ ...navLinkStyle, padding: "10px 0" }}>
-          Cardinal Engine
-        </a>
-        <a href="#founder" style={{ ...navLinkStyle, padding: "10px 0" }}>
-          Founder
-        </a>
-        <a href="#vision" style={{ ...navLinkStyle, padding: "10px 0" }}>
-          Vision
-        </a>
+        <a href="#how" style={navLinkStyle}>How</a>
+        <a href="#why" style={navLinkStyle}>Why</a>
+        <a href="#engine" style={navLinkStyle}>Engine</a>
+        <a href="#founder" style={navLinkStyle}>Founder</a>
+        <a href="#vision" style={navLinkStyle}>Vision</a>
       </nav>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-          gap: 12,
-          flexShrink: 0,
-        }}
-      >
-        <a
-          href="#engine"
-          style={{
-            appearance: "none",
-            border: "1px solid rgba(255,255,255,0.12)",
-            cursor: "pointer",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: 52,
-            padding: "0 20px",
-            borderRadius: 999,
-            fontSize: 14,
-            fontWeight: 800,
-            color: "#FFFFFF",
-            background: "rgba(255,255,255,0.05)",
-            textDecoration: "none",
-            whiteSpace: "nowrap",
-          }}
-        >
-          Explore Engine
-        </a>
-
+      {/* CTA */}
+      <div style={{ display: "flex", gap: 10 }}>
         <a
           href="#access"
           style={{
-            appearance: "none",
-            border: 0,
-            cursor: "pointer",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: 54,
-            padding: "0 24px",
+            padding: "10px 18px",
             borderRadius: 999,
-            fontSize: 15,
-            fontWeight: 900,
+            fontSize: 14,
+            fontWeight: 800,
             color: "#fff",
-            background: "linear-gradient(135deg, #EF3340 0%, #C81E39 100%)",
-            boxShadow: "0 18px 40px rgba(200, 30, 57, 0.38)",
+            background: "linear-gradient(135deg, #EF3340, #C81E39)",
             textDecoration: "none",
-            whiteSpace: "nowrap",
           }}
         >
           Get Access

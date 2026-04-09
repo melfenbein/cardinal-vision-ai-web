@@ -240,7 +240,7 @@ function InfoCard({ title, text }: { title: string; text: string }) {
 export default function Home() {
   return (
     <main style={pageStyle}>
-     <div
+    <div
   style={{
     position: "sticky",
     top: 0,
@@ -250,11 +250,11 @@ export default function Home() {
 >
   <header
     style={{
-      width: "min(1280px, calc(100% - 28px))",
+      width: "min(1320px, calc(100% - 20px))",
       margin: "0 auto",
       borderRadius: 28,
-      padding: "18px 24px",
-      background: "rgba(8, 14, 28, 0.82)",
+      padding: "18px 28px",
+      background: "rgba(8, 14, 28, 0.86)",
       border: "1px solid rgba(255,255,255,0.12)",
       backdropFilter: "blur(20px)",
       boxShadow: "0 22px 60px rgba(0,0,0,0.34)",
@@ -265,41 +265,44 @@ export default function Home() {
         display: "grid",
         gridTemplateColumns: "auto 1fr auto",
         alignItems: "center",
-        gap: 24,
+        gap: 30,
       }}
     >
-<a
-  href="#"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-    color: "#fff",
-    minWidth: 0,
-    flexShrink: 0,
-  }}
->
-  <img
-    src="/logo.png"
-    alt="Cardinal"
-    style={{
-      height: 92,
-      width: "auto",
-      objectFit: "contain",
-      display: "block",
-      filter: "drop-shadow(0 12px 28px rgba(239,51,64,0.28))",
-    }}
-  />
-</a>
+      <a
+        href="#"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          textDecoration: "none",
+          color: "#fff",
+          minWidth: 0,
+          flexShrink: 0,
+        }}
+      >
+        <img
+          src="/logo.png"
+          alt="Cardinal"
+          style={{
+            height: 118,
+            width: "auto",
+            objectFit: "contain",
+            display: "block",
+            transform: "scale(1.08)",
+            transformOrigin: "left center",
+            filter: "drop-shadow(0 14px 32px rgba(239,51,64,0.34))",
+          }}
+        />
+      </a>
+
       <nav
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: 26,
+          gap: 22,
           color: "#DCE3EF",
-          fontSize: 15,
-          fontWeight: 700,
+          fontSize: 14,
+          fontWeight: 600,
           flexWrap: "wrap",
         }}
       >
@@ -326,6 +329,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "flex-end",
           gap: 12,
+          flexShrink: 0,
         }}
       >
         <a
@@ -337,8 +341,8 @@ export default function Home() {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            minHeight: 54,
-            padding: "0 20px",
+            minHeight: 56,
+            padding: "0 22px",
             borderRadius: 999,
             fontSize: 14,
             fontWeight: 800,
@@ -360,8 +364,8 @@ export default function Home() {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            minHeight: 56,
-            padding: "0 24px",
+            minHeight: 58,
+            padding: "0 26px",
             borderRadius: 999,
             fontSize: 15,
             fontWeight: 900,

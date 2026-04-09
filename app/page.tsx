@@ -240,7 +240,7 @@ function InfoCard({ title, text }: { title: string; text: string }) {
 export default function Home() {
   return (
     <main style={pageStyle}>
-    <div
+  <div
   style={{
     position: "sticky",
     top: 0,
@@ -252,8 +252,8 @@ export default function Home() {
     style={{
       width: "min(1320px, calc(100% - 20px))",
       margin: "0 auto",
-      borderRadius: 28,
-      padding: "18px 28px",
+      borderRadius: 24,
+      padding: "10px 24px",
       background: "rgba(8, 14, 28, 0.86)",
       border: "1px solid rgba(255,255,255,0.12)",
       backdropFilter: "blur(20px)",
@@ -265,7 +265,7 @@ export default function Home() {
         display: "grid",
         gridTemplateColumns: "auto 1fr auto",
         alignItems: "center",
-        gap: 30,
+        gap: 24,
       }}
     >
       <a
@@ -283,12 +283,10 @@ export default function Home() {
           src="/logo.png"
           alt="Cardinal"
           style={{
-            height: 118,
+            height: 132,
             width: "auto",
             objectFit: "contain",
             display: "block",
-            transform: "scale(1.08)",
-            transformOrigin: "left center",
             filter: "drop-shadow(0 14px 32px rgba(239,51,64,0.34))",
           }}
         />
@@ -299,7 +297,7 @@ export default function Home() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: 22,
+          gap: 20,
           color: "#DCE3EF",
           fontSize: 14,
           fontWeight: 600,
@@ -341,8 +339,8 @@ export default function Home() {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            minHeight: 56,
-            padding: "0 22px",
+            minHeight: 52,
+            padding: "0 20px",
             borderRadius: 999,
             fontSize: 14,
             fontWeight: 800,
@@ -364,8 +362,8 @@ export default function Home() {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            minHeight: 58,
-            padding: "0 26px",
+            minHeight: 54,
+            padding: "0 24px",
             borderRadius: 999,
             fontSize: 15,
             fontWeight: 900,
@@ -382,9 +380,6 @@ export default function Home() {
     </div>
   </header>
 </div>
-
-      <section style={{ padding: "56px 0 52px" }}>
-        <div
           style={{
             ...containerStyle,
             display: "grid",

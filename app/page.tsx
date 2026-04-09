@@ -268,70 +268,29 @@ export default function Home() {
         gap: 24,
       }}
     >
-      <a
-        href="#"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          textDecoration: "none",
-          color: "#fff",
-          minWidth: 0,
-        }}
-      >
-        <div
-          style={{
-            height: 108,
-            width: 108,
-            borderRadius: 28,
-            display: "grid",
-            placeItems: "center",
-            background: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))",
-            border: "1px solid rgba(255,255,255,0.12)",
-            boxShadow: "0 16px 32px rgba(0,0,0,0.24)",
-            flexShrink: 0,
-          }}
-        >
-          <img
-            src="/logo-icon.png"
-            alt="Cardinal"
-            style={{
-              height: 74,
-              width: 74,
-              objectFit: "contain",
-              display: "block",
-              filter: "drop-shadow(0 8px 20px rgba(239,51,64,0.32))",
-            }}
-          />
-        </div>
-
-        <div style={{ minWidth: 0 }}>
-          <div
-            style={{
-              fontSize: 34,
-              fontWeight: 900,
-              letterSpacing: "-0.04em",
-              lineHeight: 0.95,
-              color: "#FFFFFF",
-            }}
-          >
-            Cardinal
-          </div>
-          <div
-            style={{
-              marginTop: 6,
-              fontSize: 13,
-              fontWeight: 800,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#AAB6CB",
-            }}
-          >
-            Vision AI · Cardinal Engine
-          </div>
-        </div>
-      </a>
-
+<a
+  href="#"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    color: "#fff",
+    minWidth: 0,
+    flexShrink: 0,
+  }}
+>
+  <img
+    src="/logo.png"
+    alt="Cardinal"
+    style={{
+      height: 92,
+      width: "auto",
+      objectFit: "contain",
+      display: "block",
+      filter: "drop-shadow(0 12px 28px rgba(239,51,64,0.28))",
+    }}
+  />
+</a>
       <nav
         style={{
           display: "flex",
